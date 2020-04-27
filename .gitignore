@@ -213,6 +213,7 @@ cython_debug/
 
 # LaTeX stuff
 ## Core latex/pdflatex auxiliary files:
+*.pdf
 *.aux
 *.lof
 *.log
