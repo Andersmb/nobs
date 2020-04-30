@@ -13,14 +13,16 @@ def stem(s):
 
 
 def get_bsse_data(skip=None) -> dict:
+    functionals = ["bp86", "pbe0"]
+    basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp"]
     if skip is None:
         skip = []
     root = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/cp"
     outputs = sorted(glob(os.path.join(root, "*.out")))
 
     data = {func: {bas: []
-                for bas in ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp"]}
-            for func in ["bp86", "pbe0"]}
+                for bas in basis_sets}
+            for func in functionals}
 
     for out in outputs:
         jobname = stem(os.path.basename(out))
@@ -34,11 +36,10 @@ def get_bsse_data(skip=None) -> dict:
         if not output.normaltermination():
             print(f"Skipped: {jobname} due to bad termination")
             continue
-        elif func not in ["pbe0", "bp86"]:
+        elif func not in functionals:
             print(f"Skipped: {jobname} due to incorrect functional")
             continue
         bsse = output.bsse("counterpoise_correction_kcalmol")
-
         data[func][basis].append((rxn, bsse))
 
     # Sort the reaction,bsse tuples
@@ -46,8 +47,9 @@ def get_bsse_data(skip=None) -> dict:
         for basis in data[func].keys():
             data[func][basis] = sorted(data[func][basis], key=lambda x: int(x[0][1:]))
 
-    with open("data_sets/counterpoise.yaml", "w") as f:
+    with open("data_sets/bsse.yaml", "w") as f:
         yaml.dump(data, f, default_flow_style=False, indent=4)
     return data
+
 
 get_bsse_data(skip=[f"r{i}" for i in range(16, 20)])
