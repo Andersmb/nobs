@@ -146,6 +146,7 @@ bp86:
     - !!python/tuple
         - r15
         - 0.164032
+    def2svp: []
     def2tzvp:
     - !!python/tuple
         - r0
@@ -343,6 +344,7 @@ pbe0:
     - !!python/tuple
         - r15
         - 0.132646
+    def2svp: []
     def2tzvp:
     - !!python/tuple
         - r0
