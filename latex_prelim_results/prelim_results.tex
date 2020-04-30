@@ -14,10 +14,15 @@
 \title{Preliminary results: \\ BSSE-free association energies with MultiWavelets}
 \begin{document}
 	\maketitle
-	
-\section*{Preface}
+	\tableofcontents
+
+\setcounter{secnumdepth}{1}
+
+\section{Preface}
 The aim of the project is to benchmark association reaction energies involving TM complexes with MRChem.
 With a MW basis ``at'' the CBS limit, we automatically eliminate the BSSE, which is known to plague reaction energies.
+We can therefore simplify the computational protocol by eliminating two birds with one stone: MW takes care of the BSIE problem related to GTO basis sets, and MWs also eliminate the need for carrying out annoying and complicated CP correction schemes.
+The CP schemes are especially painful when trying to correct chemical transformation steps, in which case it is no longer obvious how to compute the BSSE.
 
 Interesting questions:
 
@@ -57,7 +62,7 @@ Large-basis single-point calculations use the following keywords:
 The BSSE is estimated by Boys' and Bernardi's counterpoise correction, with the BSSE given by
 
 \begin{equation} \label{eq: bsse}
-\text{BSSE} = \Big(\Delta E^{\text{A}}_{\text{(A)}} - \Delta E^{\text{A}}_{\text{(AB)}} \Big) + \Big( \Delta E^{\text{B}}_{\text{(B)}} - \Delta E^{\text{B}}_{\text{(AB)}}\Big )
+\text{BSSE} = \Big(\Delta E^{\text{A}}_{\text{(A)}} - \Delta E^{\text{A}}_{\text{(AB)}} \Big) + \Big( \Delta E^{\text{B}}_{\text{(B)}} - \Delta E^{\text{B}}_{\text{(AB)}}\Big )			
 \end{equation}
 
 where the superscript indicates the molecular geometry and the subscript indicates the basis set.
@@ -65,7 +70,7 @@ This equation is easily derived from the following argument.
 If the uncorrected and CP-corrected reaction energies are
 
 \begin{align} \label{eq: rxn uncorrected}
-\Delta E &= E^{\text{AB}} - E^{\text{A}}_{\text{(A)}} - E^{\text{B}}_{\text{(B)}} \\ \label{eq: rxn corrected}
+\Delta E &= E^{\text{AB}}_{\text{(AB)}} - E^{\text{A}}_{\text{(A)}} - E^{\text{B}}_{\text{(B)}} \\ \label{eq: rxn corrected}
 \Delta E^{\text{CP}} &= E^{\text{AB}}_{\text{(AB)}} - E^{\text{A}}_{\text{(AB)}} - E^{\text{B}}_{\text{(AB)}}
 \end{align}
 
@@ -76,9 +81,9 @@ The corrected reaction energy then becomes
 \Delta E^{\text{CP}} = \Delta E + \text{BSSE}
 \end{equation}
 
-\section*{Reactions studied}
+\section{Reactions studied}
 
-\section*{Overview of BSSE for the reactions}
+\section{Overview of BSSE for the reactions}
 \Cref{fig: bsse overview} presents the BSSE for all basis sets and all reactions. 
 Systems with larger BSSEs may be of special interest in the benchmark, since the impact of
 the MRChem calculations may be larger.
@@ -93,8 +98,8 @@ Further, the tetrahedral geometry may lead to a larger electron density close to
 	\label{fig: bsse overview}
 \end{figure}
 
-\section*{Overview of non-corrected association energies}
+\section{Overview of non-corrected association energies}
 
-\section*{Overview of CP-corrected association energies}
+\section{Overview of CP-corrected association energies}
 
 \end{document}
