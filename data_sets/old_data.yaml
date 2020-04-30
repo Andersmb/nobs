@@ -1,0 +1,630 @@
+r1:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.001882
+      complex: {d3: -0.035478803, energy: -1724.98981001, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 22.806, zpe: 0.0505375}
+      fragment1: {d3: -0.026986309, energy: -1611.57403977, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 21.978, zpe: 0.04145287}
+      fragment2: {d3: -0.000622658, energy: -113.34836859, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 5.456, zpe: 0.00490171}
+    def2qzvpp:
+      bsse: 0.000369
+      complex: {d3: -0.035478803, energy: -1725.1571788, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 52.817, zpe: 0.0505375}
+      fragment1: {d3: -0.026986309, energy: -1611.72244043, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 44.361, zpe: 0.04145287}
+      fragment2: {d3: -0.000622658, energy: -113.36793008, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 8.833, zpe: 0.00490171}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.035478803, energy: -1724.157744, scf_timing: 0, zpe: 0.0505375}
+      fragment1: {d3: -0.026986309, energy: -1610.856888, scf_timing: 0, zpe: 0.04145287}
+      fragment2: {d3: -0.000622658, energy: -113.225861, scf_timing: 0, zpe: 0.00490171}
+    def2tzvp:
+      bsse: 0.000972
+      complex: {d3: -0.035478803, energy: -1725.09373451, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 32.414, zpe: 0.0505375}
+      fragment1: {d3: -0.026986309, energy: -1611.66492926, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 19.464, zpe: 0.04145287}
+      fragment2: {d3: -0.000622658, energy: -113.3611756, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 6.521, zpe: 0.00490171}
+    mw4:
+      complex: {d3: 0, energy: -1725.144996391, no_cores: 240, no_scfcycles: 15, scf_timing: 2102.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.716253621, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 1119.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3671261988, no_cores: 240, no_scfcycles: 7,
+        scf_timing: 92.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1725.156098162, no_cores: 240, no_scfcycles: 2, scf_timing: 791.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.722241058, no_cores: 240, no_scfcycles: 16,
+        scf_timing: 3491.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3672863773, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 57.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.001978
+      complex: {d3: -0.018429607, energy: -1723.76551263, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 48.012, zpe: 0.05284908}
+      fragment1: {d3: -0.0138787, energy: -1610.48059793, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 45.615, zpe: 0.04327669}
+      fragment2: {d3: -0.00033781, energy: -113.2171603, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 5.777, zpe: 0.00517987}
+    def2qzvpp:
+      bsse: 0.000308
+      complex: {d3: -0.018429607, energy: -1723.93714891, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 907.858, zpe: 0.05284908}
+      fragment1: {d3: -0.0138787, energy: -1610.63312019, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 702.984, zpe: 0.04327669}
+      fragment2: {d3: -0.00033781, energy: -113.23682698, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 10.136, zpe: 0.00517987}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.018429607, energy: -1722.947569, scf_timing: 0, zpe: 0.05284908}
+      fragment1: {d3: -0.0138787, energy: -1609.776343, scf_timing: 0, zpe: 0.04327669}
+      fragment2: {d3: -0.00033781, energy: -113.096148, scf_timing: 0, zpe: 0.00517987}
+    def2tzvp:
+      bsse: 0.000794
+      complex: {d3: -0.018429607, energy: -1723.88076638, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 103.784, zpe: 0.05284908}
+      fragment1: {d3: -0.0138787, energy: -1610.58184213, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 83.112, zpe: 0.04327669}
+      fragment2: {d3: -0.00033781, energy: -113.23094225, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 7.237, zpe: 0.00517987}
+    mw4:
+      complex: {d3: 0, energy: -1723.939348989, no_cores: 240, no_scfcycles: 14, scf_timing: 16939.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.634495371, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 9644.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2375871735, no_cores: 240, no_scfcycles: 6,
+        scf_timing: 206.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1723.947749762, no_cores: 240, no_scfcycles: 2, scf_timing: 12230.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.642763132, no_cores: 240, no_scfcycles: 19,
+        scf_timing: 37930.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2380126436, no_cores: 240, no_scfcycles: 8,
+        scf_timing: 550.0, zpe: 0}
+  reference: {hartree: -0.06868427385105233, kcal/mol: -43.1}
+r12:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.001668
+      complex: {d3: -0.039882769, energy: -1690.21936469, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 28.698, zpe: 0.09500778}
+      fragment1: {d3: -0.026986309, energy: -1611.57403977, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 21.42, zpe: 0.04145287}
+      fragment2: {d3: -0.003319674, energy: -78.60694662, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 5.386, zpe: 0.04931305}
+    def2qzvpp:
+      bsse: 0.000248
+      complex: {d3: -0.039882769, energy: -1690.38050715, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 78.437, zpe: 0.09500778}
+      fragment1: {d3: -0.026986309, energy: -1611.72244043, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 43.816, zpe: 0.04145287}
+      fragment2: {d3: -0.003319674, energy: -78.62150558, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 10.503, zpe: 0.04931305}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.039882769, energy: -1689.424864, scf_timing: 0, zpe: 0.09500778}
+      fragment1: {d3: -0.026986309, energy: -1610.856888, scf_timing: 0, zpe: 0.04145287}
+      fragment2: {d3: -0.003319674, energy: -78.524872, scf_timing: 0, zpe: 0.04931305}
+    def2tzvp:
+      bsse: 0.001212
+      complex: {d3: -0.039882769, energy: -1690.31669726, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 32.912, zpe: 0.09500778}
+      fragment1: {d3: -0.026986309, energy: -1611.66492926, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 23.439, zpe: 0.04145287}
+      fragment2: {d3: -0.003319674, energy: -78.6145575, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 8.592, zpe: 0.04931305}
+    mw4:
+      complex: {d3: 0, energy: -1690.376230233, no_cores: 120, no_scfcycles: 16, scf_timing: 3675.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.715198849, no_cores: 120, no_scfcycles: 13,
+        scf_timing: 1931.0, zpe: 0}
+      fragment2: {d3: 0, energy: -78.62182897405, no_cores: 120, no_scfcycles: 6,
+        scf_timing: 136.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1690.381068597, no_cores: 240, no_scfcycles: 2, scf_timing: 756.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.722241931, no_cores: 240, no_scfcycles: 14,
+        scf_timing: 3087.0, zpe: 0}
+      fragment2: {d3: 0, energy: -78.62230231145, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 81.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.00195
+      complex: {d3: -0.021338972, energy: -1689.02743238, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 80.379, zpe: 0.09886746}
+      fragment1: {d3: -0.0138787, energy: -1610.48059793, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 44.037, zpe: 0.04327669}
+      fragment2: {d3: -0.001899654, energy: -78.50414424, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 8.022, zpe: 0.05101972}
+    def2qzvpp:
+      bsse: 0.000261
+      complex: {d3: -0.021338972, energy: -1689.1917993, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 1536.3, zpe: 0.09886746}
+      fragment1: {d3: -0.0138787, energy: -1610.63312019, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 705.035, zpe: 0.04327669}
+      fragment2: {d3: -0.001899654, energy: -78.51784128, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 23.753, zpe: 0.05101972}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.021338972, energy: -1688.249059, scf_timing: 0, zpe: 0.09886746}
+      fragment1: {d3: -0.0138787, energy: -1609.776343, scf_timing: 0, zpe: 0.04327669}
+      fragment2: {d3: -0.001899654, energy: -78.425595, scf_timing: 0, zpe: 0.05101972}
+    def2tzvp:
+      bsse: 0.001101
+      complex: {d3: -0.021338972, energy: -1689.13526973, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 140.247, zpe: 0.09886746}
+      fragment1: {d3: -0.0138787, energy: -1610.58184213, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 84.883, zpe: 0.04327669}
+      fragment2: {d3: -0.001899654, energy: -78.51193002, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 8.517, zpe: 0.05101972}
+    mw4:
+      complex: {d3: 0, energy: -1689.19844736, no_cores: 120, no_scfcycles: 15, scf_timing: 34078.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.634539442, no_cores: 120, no_scfcycles: 12,
+        scf_timing: 18217.0, zpe: 0}
+      fragment2: {d3: 0, energy: -78.51835181434, no_cores: 120, no_scfcycles: 6,
+        scf_timing: 390.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1689.202387019, no_cores: 240, no_scfcycles: 2, scf_timing: 11523.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.64276287, no_cores: 240, no_scfcycles: 15,
+        scf_timing: 30668.0, zpe: 0}
+      fragment2: {d3: 0, energy: -78.51897615227, no_cores: 240, no_scfcycles: 3,
+        scf_timing: 370.0, zpe: 0}
+  reference: {hartree: -0.04748935871836101, kcal/mol: -29.8}
+r12b:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.004173
+      complex: {d3: -0.106132325, energy: -2152.42925997, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 64.042, zpe: 0.25365292}
+      fragment1: {d3: -0.026985412, energy: -1611.57403836, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 20.122, zpe: 0.04145315}
+      fragment2: {d3: -0.047608325, energy: -540.83246866, no_cores: 16, no_scfcycles: 54,
+        scf_timing: 70.444, zpe: 0.20908796}
+    def2qzvpp:
+      bsse: 0.000417
+      complex: {d3: -0.106132325, energy: -2152.66920273, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 289.287, zpe: 0.25365292}
+      fragment1: {d3: -0.026985412, energy: -1611.72243777, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 47.148, zpe: 0.04145315}
+      fragment2: {d3: -0.047608325, energy: -540.92798785, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 74.411, zpe: 0.20908796}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.106132325, energy: -2151.202217, scf_timing: 0, zpe: 0.25365292}
+      fragment1: {d3: -0.026985412, energy: -1610.856889, scf_timing: 0, zpe: 0.04145315}
+      fragment2: {d3: -0.047608325, energy: -540.318474, scf_timing: 0, zpe: 0.20908796}
+    def2tzvp:
+      bsse: 0.001668
+      complex: {d3: -0.106132325, energy: -2152.57490397, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 114.659, zpe: 0.25365292}
+      fragment1: {d3: -0.026985412, energy: -1611.66492707, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 24.037, zpe: 0.04145315}
+      fragment2: {d3: -0.047608325, energy: -540.89030695, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 43.217, zpe: 0.20908796}
+    mw4:
+      complex: {d3: 0, energy: -2152.666636542, no_cores: 240, no_scfcycles: 40, scf_timing: 8993.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.715983702, no_cores: 240, no_scfcycles: 13,
+        scf_timing: 980.0, zpe: 0}
+      fragment2: {d3: 0, energy: -540.929154777, no_cores: 240, no_scfcycles: 39,
+        scf_timing: 3062.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -2152.672029777, no_cores: 240, no_scfcycles: 12, scf_timing: 9490.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.722238807, no_cores: 240, no_scfcycles: 15,
+        scf_timing: 2590.0, zpe: 0}
+      fragment2: {d3: 0, energy: -540.9311905302, no_cores: 240, no_scfcycles: 10,
+        scf_timing: 2835.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.004813
+      complex: {d3: -0.058389108, energy: -2150.69033898, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 604.528, zpe: 0.26358641}
+      fragment1: {d3: -0.0139249, energy: -1610.48040286, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 45.843, zpe: 0.04334816}
+      fragment2: {d3: -0.026607327, energy: -540.18033783, no_cores: 16, no_scfcycles: 40,
+        scf_timing: 183.624, zpe: 0.21651493}
+    def2qzvpp:
+      bsse: 0.000419
+      complex: {d3: -0.058389108, energy: -2150.92921479, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 10727.174, zpe: 0.26358641}
+      fragment1: {d3: -0.0139249, energy: -1610.63297556, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 708.578, zpe: 0.04334816}
+      fragment2: {d3: -0.026607327, energy: -540.27129366, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 2068.165, zpe: 0.21651493}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.058389108, energy: -2149.488631, scf_timing: 0, zpe: 0.26358641}
+      fragment1: {d3: -0.0139249, energy: -1609.776174, scf_timing: 0, zpe: 0.04334816}
+      fragment2: {d3: -0.026607327, energy: -539.679427, scf_timing: 0, zpe: 0.21651493}
+    def2tzvp:
+      bsse: 0.001516
+      complex: {d3: -0.058389108, energy: -2150.84701732, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 865.067, zpe: 0.26358641}
+      fragment1: {d3: -0.0139249, energy: -1610.58168688, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 84.984, zpe: 0.04334816}
+      fragment2: {d3: -0.026607327, energy: -540.23951556, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 145.599, zpe: 0.21651493}
+    mw4:
+      complex: {d3: 0, energy: -2150.940288421, no_cores: 240, no_scfcycles: 75, scf_timing: 171547.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.636482599, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 6691.0, zpe: 0}
+      fragment2: {d3: 0, energy: -540.2773249661, no_cores: 240, no_scfcycles: 25,
+        scf_timing: 13463.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -2150.946544017, no_cores: 240, no_scfcycles: 18, scf_timing: 156498.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.642616784, no_cores: 240, no_scfcycles: 22,
+        scf_timing: 33239.0, zpe: 0}
+      fragment2: {d3: 0, energy: -540.2793156957, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 27718.0, zpe: 0}
+  reference: {hartree: 0.0, kcal/mol: 0}
+r2:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.002063
+      complex: {d3: -0.0255326, energy: -1830.87863911, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 17.088, zpe: 0.04186511}
+      fragment1: {d3: -0.017946168, energy: -1717.45679445, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 17.379, zpe: 0.03252149}
+      fragment2: {d3: -0.000622658, energy: -113.34836859, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 7.395, zpe: 0.00490171}
+    def2qzvpp:
+      bsse: 0.000423
+      complex: {d3: -0.0255326, energy: -1831.05062149, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 45.227, zpe: 0.04186511}
+      fragment1: {d3: -0.017946168, energy: -1717.61030113, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 44.1, zpe: 0.03252149}
+      fragment2: {d3: -0.000622658, energy: -113.36793008, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 8.348, zpe: 0.00490171}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.0255326, energy: -1830.151158, scf_timing: 0, zpe: 0.04186511}
+      fragment1: {d3: -0.017946168, energy: -1716.845523, scf_timing: 0, zpe: 0.03252149}
+      fragment2: {d3: -0.000622658, energy: -113.225861, scf_timing: 0, zpe: 0.00490171}
+    def2tzvp:
+      bsse: 0.001029
+      complex: {d3: -0.0255326, energy: -1830.98998444, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 25.32, zpe: 0.04186511}
+      fragment1: {d3: -0.017946168, energy: -1717.55541221, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 25.912, zpe: 0.03252149}
+      fragment2: {d3: -0.000622658, energy: -113.3611756, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 5.927, zpe: 0.00490171}
+    mw4:
+      complex: {d3: 0, energy: -1831.044951228, no_cores: 240, no_scfcycles: 14, scf_timing: 1508.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1717.60688603, no_cores: 240, no_scfcycles: 16,
+        scf_timing: 1221.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3671261988, no_cores: 240, no_scfcycles: 7,
+        scf_timing: 90.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1831.051167745, no_cores: 240, no_scfcycles: 10, scf_timing: 2394.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1717.611873486, no_cores: 240, no_scfcycles: 11,
+        scf_timing: 1878.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3672863773, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 57.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.002305
+      complex: {d3: -0.013218709, energy: -1829.71124647, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 46.33, zpe: 0.04378473}
+      fragment1: {d3: -0.009200719, energy: -1716.420381, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 27.997, zpe: 0.03396321}
+      fragment2: {d3: -0.00033781, energy: -113.2171603, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 5.649, zpe: 0.00517987}
+    def2qzvpp:
+      bsse: 0.000328
+      complex: {d3: -0.013218709, energy: -1829.8879203, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 731.64, zpe: 0.04378473}
+      fragment1: {d3: -0.009200719, energy: -1716.57869347, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 521.515, zpe: 0.03396321}
+      fragment2: {d3: -0.00033781, energy: -113.23682698, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 9.485, zpe: 0.00517987}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.013218709, energy: -1828.996901, scf_timing: 0, zpe: 0.04378473}
+      fragment1: {d3: -0.009200719, energy: -1715.821245, scf_timing: 0, zpe: 0.03396321}
+      fragment2: {d3: -0.00033781, energy: -113.096148, scf_timing: 0, zpe: 0.00517987}
+    def2tzvp:
+      bsse: 0.000944
+      complex: {d3: -0.013218709, energy: -1829.83324266, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 65.723, zpe: 0.04378473}
+      fragment1: {d3: -0.009200719, energy: -1716.52870294, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 53.647, zpe: 0.03396321}
+      fragment2: {d3: -0.00033781, energy: -113.23094225, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 5.771, zpe: 0.00517987}
+    mw4:
+      complex: {d3: 0, energy: -1829.894907028, no_cores: 240, no_scfcycles: 12, scf_timing: 11152.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1716.583172142, no_cores: 240, no_scfcycles: 19,
+        scf_timing: 11617.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2375871735, no_cores: 240, no_scfcycles: 6,
+        scf_timing: 206.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1829.898000781, no_cores: 240, no_scfcycles: 14, scf_timing: 32413.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1716.587825996, no_cores: 240, no_scfcycles: 3,
+        scf_timing: 6831.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2380126436, no_cores: 240, no_scfcycles: 8,
+        scf_timing: 548.0, zpe: 0}
+  reference: {hartree: -0.07426188309649742, kcal/mol: -46.6}
+r3:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.001447
+      complex: {d3: -0.016765099, energy: -1962.11374606, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 16.387, zpe: 0.03133196}
+      fragment1: {d3: -0.010879076, energy: -1848.71980702, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 20.437, zpe: 0.02269965}
+      fragment2: {d3: -0.000622658, energy: -113.34836859, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 7.602, zpe: 0.00490171}
+    def2qzvpp:
+      bsse: 0.000365
+      complex: {d3: -0.016765099, energy: -1962.30231589, no_cores: 16, no_scfcycles: 14,
+        scf_timing: 27.975, zpe: 0.03133196}
+      fragment1: {d3: -0.010879076, energy: -1848.88971866, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 33.334, zpe: 0.02269965}
+      fragment2: {d3: -0.000622658, energy: -113.36793008, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 9.426, zpe: 0.00490171}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.016765099, energy: -1961.493723, scf_timing: 0, zpe: 0.03133196}
+      fragment1: {d3: -0.010879076, energy: -1848.211903, scf_timing: 0, zpe: 0.02269965}
+      fragment2: {d3: -0.000622658, energy: -113.225861, scf_timing: 0, zpe: 0.00490171}
+    def2tzvp:
+      bsse: 0.000896
+      complex: {d3: -0.016765099, energy: -1962.24073634, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 15.347, zpe: 0.03133196}
+      fragment1: {d3: -0.010879076, energy: -1848.83462626, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 17.315, zpe: 0.02269965}
+      fragment2: {d3: -0.000622658, energy: -113.3611756, no_cores: 16, no_scfcycles: 12,
+        scf_timing: 8.221, zpe: 0.00490171}
+    mw4:
+      complex: {d3: 0, energy: -1962.29818893, no_cores: 120, no_scfcycles: 19, scf_timing: 2524.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1848.887649369, no_cores: 120, no_scfcycles: 19,
+        scf_timing: 1749.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3671292422, no_cores: 120, no_scfcycles: 7,
+        scf_timing: 113.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1962.304055392, no_cores: 240, no_scfcycles: 10, scf_timing: 1921.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1848.892651056, no_cores: 240, no_scfcycles: 8,
+        scf_timing: 1055.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3672863514, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 58.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.001584
+      complex: {d3: -0.008627846, energy: -1961.039114, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 28.868, zpe: 0.03260908}
+      fragment1: {d3: -0.005526138, energy: -1847.78116608, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 18.679, zpe: 0.02374449}
+      fragment2: {d3: -0.00033781, energy: -113.2171603, no_cores: 16, no_scfcycles: 11,
+        scf_timing: 7.862, zpe: 0.00517987}
+    def2qzvpp:
+      bsse: 0.000269
+      complex: {d3: -0.008627846, energy: -1961.23221606, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 308.005, zpe: 0.03260908}
+      fragment1: {d3: -0.005526138, energy: -1847.95585982, no_cores: 16, no_scfcycles: 15,
+        scf_timing: 172.228, zpe: 0.02374449}
+      fragment2: {d3: -0.00033781, energy: -113.23682698, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 9.745, zpe: 0.00517987}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.008627846, energy: -1960.434318, scf_timing: 0, zpe: 0.03260908}
+      fragment1: {d3: -0.005526138, energy: -1847.287816, scf_timing: 0, zpe: 0.02374449}
+      fragment2: {d3: -0.00033781, energy: -113.096148, scf_timing: 0, zpe: 0.00517987}
+    def2tzvp:
+      bsse: 0.000826
+      complex: {d3: -0.008627846, energy: -1961.17595762, no_cores: 16, no_scfcycles: 13,
+        scf_timing: 30.681, zpe: 0.03260908}
+      fragment1: {d3: -0.005526138, energy: -1847.90506928, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 27.614, zpe: 0.02374449}
+      fragment2: {d3: -0.00033781, energy: -113.23094225, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 5.66, zpe: 0.00517987}
+    mw4:
+      complex: {d3: 0, energy: -1961.238396975, no_cores: 120, no_scfcycles: 15, scf_timing: 19742.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1847.960070802, no_cores: 120, no_scfcycles: 14,
+        scf_timing: 12532.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2377425302, no_cores: 120, no_scfcycles: 8,
+        scf_timing: 380.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1961.241507727, no_cores: 240, no_scfcycles: 2, scf_timing: 6156.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1847.964235166, no_cores: 240, no_scfcycles: 8,
+        scf_timing: 10025.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2380097336, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 202.0, zpe: 0}
+  reference: {hartree: -0.04398343290693839, kcal/mol: -27.6}
+r4:
+  bp86:
+    aug-6311gdp:
+      bsse: 0
+      complex: {d3: -0.045652658, energy: -1844.78204321, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 29.524, zpe: 0.15295946}
+      fragment1: {d3: -0.03815844, energy: -1731.32130089, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 23.245, zpe: 0.13848766}
+      fragment2: {d3: -0.000622658, energy: -113.34836859, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 7.674, zpe: 0.00490171}
+    def2qzvpp:
+      bsse: 0
+      complex: {d3: -0.045652658, energy: -1844.95457969, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 124.518, zpe: 0.15295946}
+      fragment1: {d3: -0.03815844, energy: -1731.4747093, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 80.252, zpe: 0.13848766}
+      fragment2: {d3: -0.000622658, energy: -113.36793007, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 8.044, zpe: 0.00490171}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.045652658, energy: -1844.192327, scf_timing: 0, zpe: 0.15295946}
+      fragment1: {d3: -0.03815844, energy: -1730.844977, scf_timing: 0, zpe: 0.13848766}
+      fragment2: {d3: -0.000622658, energy: -113.225861, scf_timing: 0, zpe: 0.00490171}
+    def2tzvp:
+      bsse: 0
+      complex: {d3: -0.045652658, energy: -1844.8897958, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 45.071, zpe: 0.15295946}
+      fragment1: {d3: -0.03815844, energy: -1731.41477765, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 29.91, zpe: 0.13848766}
+      fragment2: {d3: -0.000622658, energy: -113.36117559, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 7.879, zpe: 0.00490171}
+    mw4:
+      complex: {d3: 0, energy: -1844.95746202, no_cores: 240, no_scfcycles: 42, scf_timing: 3509.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1731.479732942, no_cores: 240, no_scfcycles: 46,
+        scf_timing: 3196.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.367108387, no_cores: 240, no_scfcycles: 8, scf_timing: 94.0,
+        zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1844.960917897, no_cores: 240, no_scfcycles: 17, scf_timing: 3947.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1731.481899331, no_cores: 240, no_scfcycles: 13,
+        scf_timing: 2703.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.3672893451, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 58.0, zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0
+      complex: {d3: -0.024627455, energy: -1843.70688437, no_cores: 16, no_scfcycles: 23,
+        scf_timing: 109.907, zpe: 0.1590382}
+      fragment1: {d3: -0.020550897, energy: -1730.37874915, no_cores: 16, no_scfcycles: 22,
+        scf_timing: 85.215, zpe: 0.14437005}
+      fragment2: {d3: -0.00033781, energy: -113.21715987, no_cores: 16, no_scfcycles: 9,
+        scf_timing: 6.762, zpe: 0.00517919}
+    def2qzvpp:
+      bsse: 0
+      complex: {d3: -0.024627455, energy: -1843.88101074, no_cores: 16, no_scfcycles: 24,
+        scf_timing: 3092.234, zpe: 0.1590382}
+      fragment1: {d3: -0.020550897, energy: -1730.53406939, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 2082.509, zpe: 0.14437005}
+      fragment2: {d3: -0.00033781, energy: -113.23682582, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 9.443, zpe: 0.00517919}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.024627455, energy: -1843.137194, scf_timing: 0, zpe: 0.1590382}
+      fragment1: {d3: -0.020550897, energy: -1729.922224, scf_timing: 0, zpe: 0.14437005}
+      fragment2: {d3: -0.00033781, energy: -113.096154, scf_timing: 0, zpe: 0.00517919}
+    def2tzvp:
+      bsse: 0
+      complex: {d3: -0.024627455, energy: -1843.82243823, no_cores: 16, no_scfcycles: 23,
+        scf_timing: 210.398, zpe: 0.1590382}
+      fragment1: {d3: -0.020550897, energy: -1730.47959838, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 132.44, zpe: 0.14437005}
+      fragment2: {d3: -0.00033781, energy: -113.23094132, no_cores: 16, no_scfcycles: 10,
+        scf_timing: 7.786, zpe: 0.00517919}
+    mw4:
+      complex: {d3: 0, energy: -1843.888038674, no_cores: 240, no_scfcycles: 35, scf_timing: 26100.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1730.540719453, no_cores: 240, no_scfcycles: 116,
+        scf_timing: 59165.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.237714637, no_cores: 240, no_scfcycles: 8, scf_timing: 230.0,
+        zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1843.891890523, no_cores: 240, no_scfcycles: 13, scf_timing: 30097.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1730.543853463, no_cores: 240, no_scfcycles: 32,
+        scf_timing: 51526.0, zpe: 0}
+      fragment2: {d3: 0, energy: -113.2380108415, no_cores: 240, no_scfcycles: 2,
+        scf_timing: 192.0, zpe: 0}
+  reference: {hartree: -0.09960016509723366, kcal/mol: -62.5}
+r6:
+  bp86:
+    aug-6311gdp:
+      bsse: 0.00059
+      complex: {d3: -0.028030116, energy: -1612.77983006, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 23.411, zpe: 0.05780631}
+      fragment1: {d3: -0.026986309, energy: -1611.57403977, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 16.75, zpe: 0.04145287}
+      fragment2: {d3: -0.000111547, energy: -1.17713464, no_cores: 16, no_scfcycles: 7,
+        scf_timing: 4.995, zpe: 0.00973786}
+    def2qzvpp:
+      bsse: 0.000121
+      complex: {d3: -0.028030116, energy: -1612.928668, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 66.074, zpe: 0.05780631}
+      fragment1: {d3: -0.026986309, energy: -1611.72244043, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 43.928, zpe: 0.04145287}
+      fragment2: {d3: -0.000111547, energy: -1.17807172, no_cores: 16, no_scfcycles: 7,
+        scf_timing: 5.737, zpe: 0.00973786}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.028030116, energy: -1612.060645, scf_timing: 0, zpe: 0.05780631}
+      fragment1: {d3: -0.026986309, energy: -1610.856888, scf_timing: 0, zpe: 0.04145287}
+      fragment2: {d3: -0.000111547, energy: -1.172167, scf_timing: 0, zpe: 0.00973786}
+    def2tzvp:
+      bsse: 0.000285
+      complex: {d3: -0.028030116, energy: -1612.8701746, no_cores: 16, no_scfcycles: 25,
+        scf_timing: 33.719, zpe: 0.05780631}
+      fragment1: {d3: -0.026986309, energy: -1611.66492926, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 23.344, zpe: 0.04145287}
+      fragment2: {d3: -0.000111547, energy: -1.17720517, no_cores: 16, no_scfcycles: 7,
+        scf_timing: 4.936, zpe: 0.00973786}
+    mw4:
+      complex: {d3: 0, energy: -1612.924164777, no_cores: 240, no_scfcycles: 13, scf_timing: 1331.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.716253621, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 1110.0, zpe: 0}
+      fragment2: {d3: 0, energy: -1.178369987779, no_cores: 240, no_scfcycles: 5,
+        scf_timing: 26.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1612.928765482, no_cores: 240, no_scfcycles: 10, scf_timing: 2399.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1611.722241058, no_cores: 240, no_scfcycles: 16,
+        scf_timing: 3532.0, zpe: 0}
+      fragment2: {d3: 0, energy: -1.17837002824, no_cores: 240, no_scfcycles: 2, scf_timing: 24.0,
+        zpe: 0}
+  pbe0:
+    aug-6311gdp:
+      bsse: 0.000686
+      complex: {d3: -0.014809109, energy: -1611.68081238, no_cores: 16, no_scfcycles: 17,
+        scf_timing: 42.738, zpe: 0.06036806}
+      fragment1: {d3: -0.0138787, energy: -1610.48059793, no_cores: 16, no_scfcycles: 18,
+        scf_timing: 39.869, zpe: 0.04327669}
+      fragment2: {d3: -6.9729e-05, energy: -1.16803027, no_cores: 16, no_scfcycles: 6,
+        scf_timing: 4.365, zpe: 0.00999635}
+    def2qzvpp:
+      bsse: 0.000144
+      complex: {d3: -0.014809109, energy: -1611.83376725, no_cores: 16, no_scfcycles: 16,
+        scf_timing: 762.186, zpe: 0.06036806}
+      fragment1: {d3: -0.0138787, energy: -1610.63312019, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 702.474, zpe: 0.04327669}
+      fragment2: {d3: -6.9729e-05, energy: -1.16884632, no_cores: 16, no_scfcycles: 6,
+        scf_timing: 5.068, zpe: 0.00999635}
+    def2svp:
+      bsse: 0
+      complex: {d3: -0.014809109, energy: -1610.975475, scf_timing: 0, zpe: 0.06036806}
+      fragment1: {d3: -0.0138787, energy: -1609.776343, scf_timing: 0, zpe: 0.04327669}
+      fragment2: {d3: -6.9729e-05, energy: -1.163904, scf_timing: 0, zpe: 0.00999635}
+    def2tzvp:
+      bsse: 0.000315
+      complex: {d3: -0.014809109, energy: -1611.78158098, no_cores: 16, no_scfcycles: 19,
+        scf_timing: 87.451, zpe: 0.06036806}
+      fragment1: {d3: -0.0138787, energy: -1610.58184213, no_cores: 16, no_scfcycles: 20,
+        scf_timing: 83.777, zpe: 0.04327669}
+      fragment2: {d3: -6.9729e-05, energy: -1.16807736, no_cores: 16, no_scfcycles: 6,
+        scf_timing: 3.211, zpe: 0.00999635}
+    mw4:
+      complex: {d3: 0, energy: -1611.836538782, no_cores: 240, no_scfcycles: 15, scf_timing: 12487.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.634495371, no_cores: 240, no_scfcycles: 12,
+        scf_timing: 9581.0, zpe: 0}
+      fragment2: {d3: 0, energy: -1.168904197116, no_cores: 240, no_scfcycles: 5,
+        scf_timing: 32.0, zpe: 0}
+    mw6:
+      complex: {d3: 0, energy: -1611.843320386, no_cores: 240, no_scfcycles: 2, scf_timing: 7904.0,
+        zpe: 0}
+      fragment1: {d3: 0, energy: -1610.642763132, no_cores: 240, no_scfcycles: 19,
+        scf_timing: 38202.0, zpe: 0}
+      fragment2: {d3: 0, energy: -1.16890561861, no_cores: 240, no_scfcycles: 2, scf_timing: 33.0,
+        zpe: 0}
+  reference: {hartree: -0.036971581284093134, kcal/mol: -23.2}
