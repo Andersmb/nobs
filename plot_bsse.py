@@ -3,7 +3,7 @@ import numpy as np
 from collections import OrderedDict
 import matplotlib.pyplot as plt
 
-with open("data_sets/counterpoise.yaml") as f:
+with open("data_sets/bsse.yaml") as f:
     data = yaml.load(f, Loader=yaml.Loader)
 
 basis_sets = OrderedDict({"def2qzvpp": "def2-qzvpp",
