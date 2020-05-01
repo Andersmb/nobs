@@ -7,14 +7,16 @@ sys.path.append("/Users/abr121/Documents/dev/QueueGui3/output_parsers")
 from orca import OrcaOut
 from mrchem import MrchemOut
 
+AU2KCAL = 627.509
+functionals = ["bp86", "pbe0"]
+basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp"]
+
 
 def stem(s):
     return s.split(".")[0]
 
 
 def get_bsse_data(skip=None) -> dict:
-    functionals = ["bp86", "pbe0"]
-    basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp"]
     if skip is None:
         skip = []
     root = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/cp"
@@ -52,4 +54,52 @@ def get_bsse_data(skip=None) -> dict:
     return data
 
 
-get_bsse_data(skip=[f"r{i}" for i in range(16, 20)])
+def get_old_data():
+    """Return the old GTO reaction energies."""
+    with open("data_sets/old_data.yaml") as f:
+        data = yaml.load(f, Loader=yaml.Loader)
+
+    # Get relevant data in convenient format
+    skip_basis= ["def2svp", "6311gdp"]
+    d = {func: {basis: []
+                for basis in basis_sets if basis not in skip_basis}
+         for func in functionals}
+
+    for rxn in data.keys():
+        for func in functionals:
+            for basis in basis_sets:
+                if basis in skip_basis:
+                    continue
+                delta_e = data[rxn][func][basis]["complex"]["energy"] \
+                - data[rxn][func][basis]["fragment1"]["energy"] \
+                - data[rxn][func][basis]["fragment2"]["energy"]
+
+                delta_zpe = data[rxn][func][basis]["complex"]["zpe"] \
+                - data[rxn][func][basis]["fragment1"]["zpe"] \
+                - data[rxn][func][basis]["fragment2"]["zpe"]
+
+                delta_d3 = data[rxn][func][basis]["complex"]["d3"] \
+                - data[rxn][func][basis]["fragment1"]["d3"] \
+                - data[rxn][func][basis]["fragment2"]["d3"]
+
+                if "mw" not in basis:
+                    bsse = data[rxn][func][basis]["bsse"] * AU2KCAL
+                    DeltaE = delta_e * AU2KCAL
+                    DeltaE_CP = DeltaE + bsse
+                    d[func][basis].append((rxn, DeltaE, DeltaE_CP))
+    return d
+
+
+def get_old_mwref():
+    """Return the MW6 reference reaction energies."""
+    with open("data_sets/old_data.yaml") as f:
+        data = yaml.load(f, Loader=yaml.Loader)
+
+    ref = {func: [] for func in functionals}
+    for rxn in data.keys():
+        for func in functionals:
+            DeltaE = data[rxn][func]["mw6"]["complex"]["energy"] - data[rxn][func]["mw6"]["fragment1"]["energy"] - data[rxn][func]["mw6"]["fragment2"]["energy"]
+            ref[func].append((rxn, DeltaE*AU2KCAL))
+    return ref
+
+# get_bsse_data(skip=[f"r{i}" for i in range(16, 20)])
