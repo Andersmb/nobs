@@ -3,11 +3,12 @@ import numpy as np
 from collections import OrderedDict
 from pprint import pprint
 import matplotlib.pyplot as plt
+from matplotlib.ticker import FormatStrFormatter
 from functions import get_old_data, get_old_mwref
 
 
 def plot_rxn_energy(cp=True):
-    GTO = get_old_data()
+    GTO = get_old_data(d3=False, zpe=False)
     REF = get_old_mwref()
     basis_sets = OrderedDict({"def2qzvpp": "def2-qzvpp",
                               "def2tzvp": "def2-tzvp",
@@ -26,13 +27,19 @@ def plot_rxn_energy(cp=True):
 
     for ax, func in zip(axes, GTO.keys()):
         i = 0
+        ax.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
         for baskey, basval in basis_sets.items():
             rxn, gto, gto_cp = zip(*GTO[func][baskey])
             rxn, mw = zip(*REF[func])
             re = (np.asarray(gto) - np.asarray(mw)) / np.asarray(mw) * 100
             re_cp = (np.asarray(gto_cp) - np.asarray(mw)) / np.asarray(mw) * 100
 
-            ax.bar(ind + i * width, re_cp, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
+            if cp:
+                ax.bar(ind + i * width, re_cp, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
+                filename = "figs/old_gto_vs_mw_cp.png"
+            else:
+                ax.bar(ind + i * width, re_cp, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
+                filename = "figs/old_gto_vs_mw_noncp.png"
             i += 1
 
         ax.set_xticks(ind + (no_basis-1) / 2 * width)
@@ -48,8 +55,8 @@ def plot_rxn_energy(cp=True):
         cntr += 1
 
     plt.tight_layout()
-    plt.savefig("figs/old_gto_vs_mw_cp.png")
+    plt.savefig(filename)
     #plt.show()
 
 
-plot_rxn_energy()
+plot_rxn_energy(cp=True)
