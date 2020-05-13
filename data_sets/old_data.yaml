@@ -186,7 +186,7 @@ r12b:
         scf_timing: 64.042, zpe: 0.25365292}
       fragment1: {d3: -0.026985412, energy: -1611.57403836, no_cores: 16, no_scfcycles: 18,
         scf_timing: 20.122, zpe: 0.04145315}
-      fragment2: {d3: -0.047608325, energy: -540.83246866, no_cores: 16, no_scfcycles: 54,
+      fragment2: {d3: c, energy: -540.83246866, no_cores: 16, no_scfcycles: 54,
         scf_timing: 70.444, zpe: 0.20908796}
     def2qzvpp:
       bsse: 0.000417
