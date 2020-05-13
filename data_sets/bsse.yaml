@@ -2,395 +2,733 @@ bp86:
     6311gdp:
     - !!python/tuple
         - r0
-        - 3.691837
+        - 3.6918371912
     - !!python/tuple
         - r1
-        - 4.744562
+        - 4.7445624165
     - !!python/tuple
         - r2
-        - 6.245216
+        - 6.2452169948
     - !!python/tuple
         - r3
-        - 5.819594
+        - 5.81960638
     - !!python/tuple
         - r4
-        - 5.784909
+        - 5.7849076425
     - !!python/tuple
         - r5
-        - 5.05385
+        - 5.0538493035
     - !!python/tuple
         - r6
-        - 3.67631
+        - 3.6763015116
     - !!python/tuple
         - r7
-        - 4.749218
+        - 4.749217843
     - !!python/tuple
         - r8
-        - 12.95609
+        - 12.956074533
     - !!python/tuple
         - r9
-        - 11.544206
+        - 11.5442058894
     - !!python/tuple
         - r10
-        - 14.502292
+        - 14.5022928535
     - !!python/tuple
         - r11
-        - 11.928967
+        - 11.9289669862
     - !!python/tuple
         - r12
-        - 7.921159
+        - 7.9211593096
     - !!python/tuple
         - r13
-        - 8.223981
+        - 8.2239818497
     - !!python/tuple
         - r14
-        - 7.869435
+        - 7.8694352488
     - !!python/tuple
         - r15
-        - 8.738592
+        - 8.7385911248
+    - !!python/tuple
+        - r19
+        - 6.8624248071
+    - !!python/tuple
+        - r20
+        - 3.6951102152
+    - !!python/tuple
+        - r21
+        - 10.8740844474
+    - !!python/tuple
+        - r25
+        - 1.6778790586
+    631g:
+    - !!python/tuple
+        - r0
+        - 5.521402808
+    - !!python/tuple
+        - r1
+        - 6.6963376075
+    - !!python/tuple
+        - r2
+        - 8.7149565631
+    - !!python/tuple
+        - r3
+        - 7.7239261401
+    - !!python/tuple
+        - r4
+        - 7.4131887661
+    - !!python/tuple
+        - r5
+        - 6.5362182068
+    - !!python/tuple
+        - r6
+        - 6.1285195852
+    - !!python/tuple
+        - r7
+        - 6.0833824237
+    - !!python/tuple
+        - r8
+        - 10.9052878972
+    - !!python/tuple
+        - r9
+        - 9.6360610855
+    - !!python/tuple
+        - r10
+        - 11.7428453066
+    - !!python/tuple
+        - r11
+        - 10.3310930031
+    - !!python/tuple
+        - r12
+        - 8.8480837897
+    - !!python/tuple
+        - r13
+        - 8.1007405255
+    - !!python/tuple
+        - r14
+        - 10.7707620786
+    - !!python/tuple
+        - r15
+        - 7.8137239958
+    - !!python/tuple
+        - r19
+        - 8.717037634
+    - !!python/tuple
+        - r20
+        - 7.9540950608
+    - !!python/tuple
+        - r21
+        - 13.1370106662
+    - !!python/tuple
+        - r25
+        - 2.5059303969
     aug-6311gdp:
     - !!python/tuple
         - r0
-        - 0.912524
+        - 0.9125489391
     - !!python/tuple
         - r1
-        - 1.494147
+        - 1.4941744183
     - !!python/tuple
         - r2
-        - 2.221219
+        - 2.2212306931
     - !!python/tuple
         - r3
-        - 2.626499
+        - 2.6259416188
     - !!python/tuple
         - r4
-        - 1.962167
+        - 1.962160465
     - !!python/tuple
         - r5
-        - 1.875425
+        - 1.8754246648
     - !!python/tuple
         - r6
-        - 1.257219
+        - 1.2572079437
     - !!python/tuple
         - r7
-        - 2.001837
+        - 2.0018255598
     - !!python/tuple
         - r8
-        - 0.876189
+        - 0.8761742504
     - !!python/tuple
         - r9
-        - 1.19256
+        - 1.1925677395
     - !!python/tuple
         - r10
-        - 1.577811
+        - 1.5778136497
     - !!python/tuple
         - r11
-        - 1.938198
+        - 1.938103464
     - !!python/tuple
         - r12
-        - 1.567868
+        - 1.567868134
     - !!python/tuple
         - r13
-        - 1.5619
+        - 1.5618904833
     - !!python/tuple
         - r14
-        - 0.892726
+        - 0.8927283772
     - !!python/tuple
         - r15
-        - 1.554012
+        - 1.5540222107
+    - !!python/tuple
+        - r19
+        - 2.6995418982
+    - !!python/tuple
+        - r20
+        - 1.1803591756
+    - !!python/tuple
+        - r21
+        - 0.9085264182
+    - !!python/tuple
+        - r25
+        - 0.3722418528
     def2qzvpp:
     - !!python/tuple
         - r0
-        - 0.139916
+        - 0.1399368287
     - !!python/tuple
         - r1
-        - 0.185914
+        - 0.1859129072
     - !!python/tuple
         - r2
-        - 0.249255
+        - 0.2492529753
     - !!python/tuple
         - r3
-        - 0.268128
+        - 0.2680734135
     - !!python/tuple
         - r4
-        - 0.53525
+        - 0.5353417331
     - !!python/tuple
         - r5
-        - 0.341837
+        - 0.341797187
     - !!python/tuple
         - r6
-        - 0.12783
+        - 0.1278399612
     - !!python/tuple
         - r7
-        - 0.189501
+        - 0.1895014429
     - !!python/tuple
         - r8
-        - 0.148281
+        - 0.1482730349
     - !!python/tuple
         - r9
-        - 0.158769
+        - 0.1587172945
     - !!python/tuple
         - r10
-        - 0.222986
+        - 0.2229889628
     - !!python/tuple
         - r11
-        - 0.206632
+        - 0.2066390274
     - !!python/tuple
         - r12
-        - 0.48174
+        - 0.4817401654
     - !!python/tuple
         - r13
-        - 0.302441
+        - 0.3024385674
     - !!python/tuple
         - r14
-        - 0.117789
+        - 0.1177870789
     - !!python/tuple
         - r15
-        - 0.164032
-    def2svp: []
+        - 0.1640341156
+    - !!python/tuple
+        - r19
+        - 0.3867683725
+    - !!python/tuple
+        - r20
+        - 0.2311862383
+    - !!python/tuple
+        - r21
+        - 0.2292782344
+    - !!python/tuple
+        - r25
+        - 0.0776112544
+    def2svp:
+    - !!python/tuple
+        - r0
+        - 5.0042329198
+    - !!python/tuple
+        - r1
+        - 6.2495259108
+    - !!python/tuple
+        - r2
+        - 7.8525395689
+    - !!python/tuple
+        - r3
+        - 7.1655821861
+    - !!python/tuple
+        - r4
+        - 8.1044837421
+    - !!python/tuple
+        - r5
+        - 7.0626444803
+    - !!python/tuple
+        - r6
+        - 5.5481784916
+    - !!python/tuple
+        - r7
+        - 6.5749363279
+    - !!python/tuple
+        - r8
+        - 7.7267244537
+    - !!python/tuple
+        - r9
+        - 7.865476671
+    - !!python/tuple
+        - r10
+        - 9.6767657745
+    - !!python/tuple
+        - r11
+        - 8.3823458569
+    - !!python/tuple
+        - r12
+        - 7.1823322838
+    - !!python/tuple
+        - r13
+        - 6.8633294868
+    - !!python/tuple
+        - r14
+        - 6.2957782187
+    - !!python/tuple
+        - r15
+        - 6.9732561368
+    - !!python/tuple
+        - r19
+        - 8.9465538825
+    - !!python/tuple
+        - r20
+        - 4.653808551
+    - !!python/tuple
+        - r21
+        - 6.9413171838
+    - !!python/tuple
+        - r25
+        - 2.4195341421
     def2tzvp:
     - !!python/tuple
         - r0
-        - 0.684315
+        - 0.6843104244
     - !!python/tuple
         - r1
-        - 0.820665
+        - 0.8206656201
     - !!python/tuple
         - r2
-        - 1.08468
+        - 1.0846801173
     - !!python/tuple
         - r3
-        - 1.054313
+        - 1.0543054186
     - !!python/tuple
         - r4
-        - 1.971371
+        - 1.9713738657
     - !!python/tuple
         - r5
-        - 1.372338
+        - 1.3723792513
     - !!python/tuple
         - r6
-        - 0.635565
+        - 0.635557807
     - !!python/tuple
         - r7
-        - 1.003315
+        - 1.0033147903
     - !!python/tuple
         - r8
-        - 0.669139
+        - 0.6691395158
     - !!python/tuple
         - r9
-        - 0.67543
+        - 0.6754373216
     - !!python/tuple
         - r10
-        - 0.894434
+        - 0.8944576037
     - !!python/tuple
         - r11
-        - 0.833806
+        - 0.8338036505
     - !!python/tuple
         - r12
-        - 1.509131
+        - 1.5091310954
     - !!python/tuple
         - r13
-        - 1.068494
+        - 1.0684945893
     - !!python/tuple
         - r14
-        - 0.545922
+        - 0.5459249861
     - !!python/tuple
         - r15
-        - 0.792827
+        - 0.7928269364
+    - !!python/tuple
+        - r19
+        - 1.7307783811
+    - !!python/tuple
+        - r20
+        - 0.6090339428
+    - !!python/tuple
+        - r21
+        - 0.5624046902
+    - !!python/tuple
+        - r25
+        - 0.1808777122
 pbe0:
     6311gdp:
     - !!python/tuple
         - r0
-        - 3.902299
+        - 3.90229938
     - !!python/tuple
         - r1
-        - 5.062207
+        - 5.0622069075
     - !!python/tuple
         - r2
-        - 6.68758
+        - 6.6875799036
     - !!python/tuple
         - r3
-        - 6.140121
+        - 6.140121411
     - !!python/tuple
         - r4
-        - 5.43176
+        - 5.4317598843
     - !!python/tuple
         - r5
-        - 4.961917
+        - 4.9619172269
     - !!python/tuple
         - r6
-        - 3.726588
+        - 3.7265878237
     - !!python/tuple
         - r7
-        - 4.71374
+        - 4.7137395509
     - !!python/tuple
         - r8
-        - 13.662581
+        - 13.6625809548
     - !!python/tuple
         - r9
-        - 11.835234
+        - 11.8352335194
     - !!python/tuple
         - r10
-        - 15.003057
+        - 15.0030571465
     - !!python/tuple
         - r11
-        - 12.247092
+        - 12.2470907057
     - !!python/tuple
         - r12
-        - 7.471504
+        - 7.471503805
     - !!python/tuple
         - r13
-        - 7.842458
+        - 7.8424576328
     - !!python/tuple
         - r14
-        - 7.642126
+        - 7.6421263887
     - !!python/tuple
         - r15
-        - 8.319708
+        - 8.3197075948
+    - !!python/tuple
+        - r19
+        - 6.496120758
+    - !!python/tuple
+        - r20
+        - 3.8384350907
+    - !!python/tuple
+        - r21
+        - 10.8713146227
+    - !!python/tuple
+        - r25
+        - 1.8296270501
+    631g:
+    - !!python/tuple
+        - r0
+        - 5.4697628334
+    - !!python/tuple
+        - r1
+        - 6.6354814082
+    - !!python/tuple
+        - r2
+        - 8.5705460971
+    - !!python/tuple
+        - r3
+        - 7.6369559027
+    - !!python/tuple
+        - r4
+        - 6.7018123098
+    - !!python/tuple
+        - r5
+        - 6.1090859454
+    - !!python/tuple
+        - r6
+        - 5.8680585462
+    - !!python/tuple
+        - r7
+        - 5.78645144
+    - !!python/tuple
+        - r8
+        - 11.408068565
+    - !!python/tuple
+        - r9
+        - 9.7119174482
+    - !!python/tuple
+        - r10
+        - 11.7955353549
+    - !!python/tuple
+        - r11
+        - 10.4828768254
+    - !!python/tuple
+        - r12
+        - 8.2153675318
+    - !!python/tuple
+        - r13
+        - 7.6528324451
+    - !!python/tuple
+        - r14
+        - 10.39874136
+    - !!python/tuple
+        - r15
+        - 7.4682849349
+    - !!python/tuple
+        - r19
+        - 8.0139522658
+    - !!python/tuple
+        - r20
+        - 7.835343877
+    - !!python/tuple
+        - r21
+        - 13.1197098666
+    - !!python/tuple
+        - r25
+        - 2.5906833939
     aug-6311gdp:
     - !!python/tuple
         - r0
-        - 1.019338
+        - 1.0193359108
     - !!python/tuple
         - r1
-        - 1.70368
+        - 1.7036801578
     - !!python/tuple
         - r2
-        - 2.585623
+        - 2.5856244165
     - !!python/tuple
         - r3
-        - 2.954797
+        - 2.9546027831
     - !!python/tuple
         - r4
-        - 1.992429
+        - 1.992429491
     - !!python/tuple
         - r5
-        - 1.943659
+        - 1.9436540949
     - !!python/tuple
         - r6
-        - 1.39695
+        - 1.3969290349
     - !!python/tuple
         - r7
-        - 2.17885
+        - 2.178851559
     - !!python/tuple
         - r8
-        - 1.005472
+        - 1.0054714759
     - !!python/tuple
         - r9
-        - 1.319301
+        - 1.3193001474
     - !!python/tuple
         - r10
-        - 1.754485
+        - 1.7544876165
     - !!python/tuple
         - r11
-        - 2.095001
+        - 2.0950252046
     - !!python/tuple
         - r12
-        - 1.603409
+        - 1.6034090515
     - !!python/tuple
         - r13
-        - 1.592972
+        - 1.5929715061
     - !!python/tuple
         - r14
-        - 0.983263
+        - 0.9832629284
     - !!python/tuple
         - r15
-        - 1.677425
+        - 1.6774248676
+    - !!python/tuple
+        - r19
+        - 2.8306871378
+    - !!python/tuple
+        - r20
+        - 1.2403369249
+    - !!python/tuple
+        - r21
+        - 0.9944786478
+    - !!python/tuple
+        - r25
+        - 0.4298938031
     def2qzvpp:
     - !!python/tuple
         - r0
-        - 0.140329
+        - 0.1403291474
     - !!python/tuple
         - r1
-        - 0.187459
+        - 0.1874584618
     - !!python/tuple
         - r2
-        - 0.246896
+        - 0.2468966163
     - !!python/tuple
         - r3
-        - 0.261233
+        - 0.2612164973
     - !!python/tuple
         - r4
-        - 0.44264
+        - 0.4426402677
     - !!python/tuple
         - r5
-        - 0.301597
+        - 0.3015969524
     - !!python/tuple
         - r6
-        - 0.107693
+        - 0.107692718
     - !!python/tuple
         - r7
-        - 0.183979
+        - 0.183979803
     - !!python/tuple
         - r8
-        - 0.121507
+        - 0.1215053835
     - !!python/tuple
         - r9
-        - 0.129468
+        - 0.1294664645
     - !!python/tuple
         - r10
-        - 0.171984
+        - 0.1719830231
     - !!python/tuple
         - r11
-        - 0.175651
+        - 0.1756531978
     - !!python/tuple
         - r12
-        - 0.382746
+        - 0.3827462906
     - !!python/tuple
         - r13
-        - 0.246423
+        - 0.2464230353
     - !!python/tuple
         - r14
-        - 0.080839
+        - 0.0808391607
     - !!python/tuple
         - r15
-        - 0.132646
-    def2svp: []
+        - 0.1326463038
+    - !!python/tuple
+        - r19
+        - 0.3435361399
+    - !!python/tuple
+        - r20
+        - 0.1925240911
+    - !!python/tuple
+        - r21
+        - 0.1686525192
+    - !!python/tuple
+        - r25
+        - 0.0917059223
+    def2svp:
+    - !!python/tuple
+        - r0
+        - 4.7483541396
+    - !!python/tuple
+        - r1
+        - 5.9939676623
+    - !!python/tuple
+        - r2
+        - 7.4864020609
+    - !!python/tuple
+        - r3
+        - 6.8677516682
+    - !!python/tuple
+        - r4
+        - 7.2082103158
+    - !!python/tuple
+        - r5
+        - 6.5122252118
+    - !!python/tuple
+        - r6
+        - 5.0254840768
+    - !!python/tuple
+        - r7
+        - 6.2896959622
+    - !!python/tuple
+        - r8
+        - 7.6693699428
+    - !!python/tuple
+        - r9
+        - 7.6757825828
+    - !!python/tuple
+        - r10
+        - 9.4365525683
+    - !!python/tuple
+        - r11
+        - 8.221702486
+    - !!python/tuple
+        - r12
+        - 6.3884894103
+    - !!python/tuple
+        - r13
+        - 6.2500054532
+    - !!python/tuple
+        - r14
+        - 5.7536027871
+    - !!python/tuple
+        - r15
+        - 6.424736652
+    - !!python/tuple
+        - r19
+        - 8.222301004
+    - !!python/tuple
+        - r20
+        - 4.2473852787
+    - !!python/tuple
+        - r21
+        - 6.6619787913
+    - !!python/tuple
+        - r25
+        - 2.3316569031
     def2tzvp:
     - !!python/tuple
         - r0
-        - 0.60545
+        - 0.6054503643
     - !!python/tuple
         - r1
-        - 0.727611
+        - 0.7276108673
     - !!python/tuple
         - r2
-        - 0.987105
+        - 0.9871046013
     - !!python/tuple
         - r3
-        - 0.930427
+        - 0.9304251646
     - !!python/tuple
         - r4
-        - 1.725222
+        - 1.7252215378
     - !!python/tuple
         - r5
-        - 1.198726
+        - 1.1987256109
     - !!python/tuple
         - r6
-        - 0.496376
+        - 0.4963763107
     - !!python/tuple
         - r7
-        - 0.881109
+        - 0.8811089184
     - !!python/tuple
         - r8
-        - 0.655864
+        - 0.6558641864
     - !!python/tuple
         - r9
-        - 0.631429
+        - 0.6314291742
     - !!python/tuple
         - r10
-        - 0.819395
+        - 0.8193955419
     - !!python/tuple
         - r11
-        - 0.750054
+        - 0.7500535383
     - !!python/tuple
         - r12
-        - 1.314068
+        - 1.3140677265
     - !!python/tuple
         - r13
-        - 0.93192
+        - 0.9319197026
     - !!python/tuple
         - r14
-        - 0.461286
+        - 0.4612861329
     - !!python/tuple
         - r15
-        - 0.716282
+        - 0.7162826356
+    - !!python/tuple
+        - r19
+        - 1.5142836346
+    - !!python/tuple
+        - r20
+        - 0.4974654782
+    - !!python/tuple
+        - r21
+        - 0.5189304274
+    - !!python/tuple
+        - r25
+        - 0.1987771556
