@@ -7,9 +7,9 @@ from matplotlib.ticker import FormatStrFormatter
 from functions import get_old_data, get_old_mwref
 
 
-def plot_rxn_energy(cp=True):
+def plot_re_rxn_energy(cp=True):
     GTO = get_old_data(d3=False, zpe=False)
-    REF = get_old_mwref()
+    REF = get_old_mwref(d3=False)
     basis_sets = OrderedDict({"def2qzvpp": "def2-qzvpp",
                               "def2tzvp": "def2-tzvp",
                               "aug-6311gdp": "6-311+g(d,p)"})
@@ -31,6 +31,7 @@ def plot_rxn_energy(cp=True):
         for baskey, basval in basis_sets.items():
             rxn, gto, gto_cp = zip(*GTO[func][baskey])
             rxn, mw = zip(*REF[func])
+
             re = (np.asarray(gto) - np.asarray(mw)) / np.asarray(mw) * 100
             re_cp = (np.asarray(gto_cp) - np.asarray(mw)) / np.asarray(mw) * 100
 
@@ -38,7 +39,7 @@ def plot_rxn_energy(cp=True):
                 ax.bar(ind + i * width, re_cp, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
                 filename = "figs/old_gto_vs_mw_cp.png"
             else:
-                ax.bar(ind + i * width, re_cp, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
+                ax.bar(ind + i * width, re, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
                 filename = "figs/old_gto_vs_mw_noncp.png"
             i += 1
 
@@ -59,4 +60,5 @@ def plot_rxn_energy(cp=True):
     #plt.show()
 
 
-plot_rxn_energy(cp=True)
+plot_re_rxn_energy(cp=True)
+plot_re_rxn_energy(cp=False)
