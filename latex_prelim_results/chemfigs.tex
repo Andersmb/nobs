@@ -1,0 +1,259 @@
+
+	\definesubmol{ZeroOne}{OC -[2] Cr (>:[:20,.85]CO) (<[:-20,.85]CO) (>:[:160,.85]OC) (<[:-160,.85]OC)}
+	\definesubmol{OneTwo}{Me >:[:20,.85] = <[:20,.85] Me}
+	\definesubmol{TwoTwo}{\emph{t}Bu >:[:20,.85] = <[:20,.85] \emph{t}Bu}
+	\definesubmol{ThreeTwo}{Ph >:[:20,.85] = <[:20,.85] Ph}
+	\definesubmol{EightOne}{Ni (<[:240] CO) (>:[:200] OC) -[:-30] CO}
+\section{Reactions studied}
+\subsection{New set}	
+	
+\begin{figure}[H]
+	%\tiny
+	\centering
+	
+	\subfloat[Reaction 0]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{=} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] (=[::90,.5]) (=[::-90,.5])}
+	\schemestop
+	}
+\\
+	\subfloat[Reaction 1]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{!{OneTwo}} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] (=[::90,.5] <:[:200,.85] Me) (=[::-90,.5] <[:20,.85] Me) }
+	\schemestop
+	}
+\\
+	\subfloat[Reaction 2]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{!{TwoTwo}} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] (=[::90,.5] <:[:200,.85] \emph{t}Bu) (=[::-90,.5] <[:20,.85] \emph{t}Bu) }
+	\schemestop
+}
+\\
+\subfloat[Reaction 3]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{!{ThreeTwo}} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] (=[::90,.5] <:[:200,.85] Ph) (=[::-90,.5] <[:20,.85] Ph) }
+	\schemestop
+}
+\\
+\subfloat[Reaction 4]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{H_2O} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,2,dashed] H_2O }
+	\schemestop
+}
+	\caption{Overview of reactions. ``cp$^-$'': deprotonated cyclopentadienyl. ``\emph{m}DMB'': \emph{meta} substituted dimethylbenzene.}
+\label{fig: }
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+	%\tiny
+	\centering
+	\ContinuedFloat
+\subfloat[Reaction 5]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{MeOH} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,2,dashed] MeOH }
+	\schemestop
+}
+\\
+\subfloat[Reaction 6]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{CH_3C~N} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] N ~[:90] CCH_3 }
+	\schemestop
+}
+\\
+\subfloat[Reaction 7]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{THF} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,2,dashed] THF  }
+	\schemestop
+}
+\\
+\subfloat[Reaction 8]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{=} \arrow
+	\chemfig{(=[,.5]) (=[:-180,.5]) -[:-90,,,,dashed] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 9]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{!{OneTwo}} \arrow
+	\chemfig{(=[:-180,.5] <:[:200,.85] Me) (=[,.5] <[:20,.85] Me) -[:-90,,,,dashed] !{EightOne}}
+	\schemestop
+}
+	\caption{Continued.}
+\label{fig: }
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+	%\tiny
+	\centering
+	\ContinuedFloat
+\subfloat[Reaction 10]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{!{TwoTwo}} \arrow
+	\chemfig{(=[:-180,.5] <:[:200,.85] \emph{t}Bu) (=[,.5] <[:20,.85] \emph{t}Bu) -[:-90,,,,dashed] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 11]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{!{ThreeTwo}} \arrow
+	\chemfig{(=[:-180,.5] <:[:200,.85] Ph) (=[,.5] <[:20,.85] Ph) -[:-90,,,,dashed] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 12]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{H_2O} \arrow
+	\chemfig{H_2O -[:-90,,2,,dashed] !{EightOne}}
+	\schemestop
+}
+
+
+\subfloat[Reaction 13]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{MeOH} \arrow
+	\chemfig{MeOH -[:-90,,2,,dashed] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 14]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{CH_3C~N} \arrow
+	\chemfig{CCH_3~[:-90]N -[:-90,,,,dashed] !{EightOne}}
+	\schemestop
+}
+	\caption{Continued}
+\label{fig: }
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+	%\tiny
+	\centering
+	\ContinuedFloat
+\subfloat[Reaction 15]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{THF} \arrow
+	\chemfig{THF -[:-90,,2,,dashed] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 16]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{Cr^{2+}} \arrow{0}[,0] \+
+	\chemfig{2cp^{-}} \arrow
+	\chemfig{Cr (- cp) (-[4] cp)}
+	\schemestop
+}
+\\
+\subfloat[Reaction 17]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{Cr^{+} - cp^{-}} \arrow{0}[,0] \+
+	\chemfig{cp^{-}} \arrow
+	\chemfig{Cr (- cp) (-[4] cp)}
+	\schemestop
+}
+\\
+\subfloat[Reaction 18]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{\emph{m}DMB >:[:20,.85] = <[:20,.85] \emph{m}DMB} \arrow
+	\chemfig{!{ZeroOne} -[:90,1.25,,,dashed] (=[::90,.5] <:[:200,.85] \emph{m}DMB) (=[::-90,.5] <[:20,.85] \emph{m}DMB) }
+	\schemestop
+}
+\\
+\subfloat[Reaction 19]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{} \arrow{0}[,0] \+
+	\chemfig{MeOH} \arrow
+	\chemfig{}
+	\schemestop
+}
+	\caption{Continued}
+\label{fig: }
+\end{figure}
+
+\newpage
+\begin{figure}[H]
+	%\tiny
+	\centering
+	\ContinuedFloat
+\subfloat[Reaction 20]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{ZeroOne}} \arrow{0}[,0] \+
+	\chemfig{CO} \arrow
+	\chemfig{!{ZeroOne} -[:90] CO}
+	\schemestop
+}
+\\
+\subfloat[Reaction 21]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{CO} \arrow
+	\chemfig{CO -[:-90] !{EightOne}}
+	\schemestop
+}
+\\
+\subfloat[Reaction 22]{
+	\setchemfig{scheme debug=false}
+	\schemestart
+	\chemfig{!{EightOne}} \arrow{0}[,0] \+
+	\chemfig{\emph{m}DMB >:[:20,.85] = <[:20,.85] \emph{m}DMB} \arrow
+	\chemfig{(=[:-180,.5] <:[:200,.85] \emph{m}DMB) (=[,.5] <[:20,.85] \emph{m}DMB) -[:-90,,,,dashed]  !{EightOne}}
+	\schemestop
+	}
+	\caption{Continued}
+	\label{fig: }
+\end{figure}
+	
+\subsection{Old set}
+The reaction numbers refer to the same indeces used in \textcite{dohm2018}.
+Note that reaction 12b is the same as reaction 12 but using trans-stilbene instead of ethene.
