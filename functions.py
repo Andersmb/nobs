@@ -1,5 +1,6 @@
 import yaml
 from glob import glob
+from tqdm import tqdm, trange
 from pprint import pprint
 import sys
 import os
@@ -9,7 +10,7 @@ from mrchem import MrchemOut
 
 AU2KCAL = 627.509
 functionals = ["bp86", "pbe0"]
-basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp"]
+basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp", "631g"]
 
 
 def stem(s):
@@ -26,22 +27,23 @@ def get_bsse_data(skip=None) -> dict:
                 for bas in basis_sets}
             for func in functionals}
 
-    for out in outputs:
+    for out in tqdm(outputs, desc="Collecting BSSE data"):
         jobname = stem(os.path.basename(out))
-        rxn = jobname.split("_")[1]
-        func = jobname.split("_")[2]
-        basis = jobname.split("_")[3]
+        rxn = jobname.split("_")[0]
+        func = jobname.split("_")[1]
+        basis = jobname.split("_")[2]
+
         if any([rxn in skip, func in skip, basis in skip]):
             continue
 
         output = OrcaOut(out)
         if not output.normaltermination():
-            print(f"Skipped: {jobname} due to bad termination")
+            tqdm.write(f"Skipped: {jobname} due to bad termination")
             continue
         elif func not in functionals:
-            print(f"Skipped: {jobname} due to incorrect functional")
+            tqdm.write(f"Skipped: {jobname} due to incorrect functional")
             continue
-        bsse = output.bsse("counterpoise_correction_kcalmol")
+        bsse = output.cmp_var("bsse_kcalmol")
         data[func][basis].append((rxn, bsse))
 
     # Sort the reaction,bsse tuples
@@ -54,13 +56,13 @@ def get_bsse_data(skip=None) -> dict:
     return data
 
 
-def get_old_data(d3=True, zpe=True) -> dict:
+def get_old_data(d3=False, zpe=False) -> dict:
     """Return the old GTO reaction energies."""
     with open("data_sets/old_data.yaml") as f:
         data = yaml.load(f, Loader=yaml.Loader)
 
     # Get relevant data in convenient format
-    skip_basis= ["def2svp", "6311gdp"]
+    skip_basis= ["def2svp", "6311gdp", "631g"]
     d = {func: {basis: []
                 for basis in basis_sets if basis not in skip_basis}
          for func in functionals}
@@ -74,23 +76,17 @@ def get_old_data(d3=True, zpe=True) -> dict:
                 - data[rxn][func][basis]["fragment1"]["energy"] \
                 - data[rxn][func][basis]["fragment2"]["energy"]
 
-                if zpe:
-                    delta_zpe = data[rxn][func][basis]["complex"]["zpe"] \
-                    - data[rxn][func][basis]["fragment1"]["zpe"] \
-                    - data[rxn][func][basis]["fragment2"]["zpe"]
-                else:
-                    delta_zpe = 0
+                delta_zpe = data[rxn][func]["def2svp"]["complex"]["zpe"] \
+                - data[rxn][func]["def2svp"]["fragment1"]["zpe"] \
+                - data[rxn][func]["def2svp"]["fragment2"]["zpe"] if zpe else 0.0
 
-                if d3:
-                    delta_d3 = data[rxn][func][basis]["complex"]["d3"] \
-                    - data[rxn][func][basis]["fragment1"]["d3"] \
-                    - data[rxn][func][basis]["fragment2"]["d3"]
-                else:
-                    delta_d3 = 0
+                delta_d3 = data[rxn][func]["def2svp"]["complex"]["d3"] \
+                - data[rxn][func]["def2svp"]["fragment1"]["d3"] \
+                - data[rxn][func]["def2svp"]["fragment2"]["d3"] if d3 else 0.0
 
                 if "mw" not in basis:
                     bsse = data[rxn][func][basis]["bsse"] * AU2KCAL
-                    DeltaE = (delta_e + delta_zpe +delta_d3) * AU2KCAL
+                    DeltaE = (delta_e + delta_zpe + delta_d3) * AU2KCAL
                     DeltaE_CP = DeltaE + bsse
                     d[func][basis].append((rxn, DeltaE, DeltaE_CP))
     return d
