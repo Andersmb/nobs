@@ -8,14 +8,19 @@
 \usepackage{here}
 \usepackage{threeparttable, booktabs}
 \usepackage{siunitx}
+\usepackage{here}
+\usepackage{chemfig}
+\usepackage{subfig}
 \usepackage{todonotes}
 \usepackage{hyperref}
 \usepackage{cleveref}
-\usepackage[backend=biber]{biblatex}
+\usepackage[backend=bibtex]{biblatex}
 	\addbibresource{refs.bib}
 
-\author{Anders Brakestad, Luca Frediani, and Kathrin Helen Hopmann}
+ \author{Anders Brakestad, Luca Frediani, and Kathrin Helen Hopmann}
 \title{Preliminary results: \\ BSSE-free association energies with MultiWavelets}
+\date{Last Update: \today}
+
 \begin{document}
 	\maketitle
 	\tableofcontents
@@ -23,6 +28,19 @@
 \setcounter{secnumdepth}{2}
 
 \section{Preface}
+
+To Do:
+\begin{itemize}
+	\item Look through recent literature (2019--2020) and get an idea of the most common computational protocols. 
+	\item Add error col in Tables 1 and 2 MW relative to ref
+	\item Track saga failures. See trend?
+	\item Literature dig: When do CP corrections?
+	\item Add reactions from from Weymuth
+	\item End of project: Run a timing experiment comparing MW to GTOs. Similar conditions.
+	\item Compare H2 association (sigma complex) and H2 oxidative addition.
+	\item MW reaction energies in-between CP and non-CP corrected GTO reaction energies!
+\end{itemize}
+
 The aim of the project is to benchmark association reaction energies involving TM complexes with MRChem.
 With a MW basis ``at'' the CBS limit, we automatically eliminate the BSSE, which is known to plague reaction energies.
 We can therefore simplify the computational protocol by eliminating two birds with one stone: MW takes care of the BSIE problem related to GTO basis sets, and MWs also eliminate the need for carrying out annoying and complicated CP correction schemes.
@@ -30,11 +48,7 @@ We can therefore simplify the computational protocol by eliminating two birds wi
 
 \section{Computational details}
 GTO calculations are run with ORCA version 4.2.1, and MW calculations are run with MRChem.
-
 MW calculations performed with $\epsilon_{\text{rel}} = \num{1e-6}$
-
-Several basis sets are currently tested: \verb|def2-svp|, \verb|def2-tzvp|, \verb|def2-qzvpp|, \verb|6-311g(d,p)|, and \verb|6-311+g(d,p)|.
-Two functionals are currently being tested: \verb|bp86| and \verb|pbe0|.
 
 Geometries are optimized with the \verb|def2-svp| basis set, with the following ORCA keyword line:
 
@@ -77,16 +91,7 @@ The corrected reaction energy then becomes
 \Delta E^{\text{CP}} = \Delta E + \text{BSSE}
 \end{equation}
 
-\section{Reactions studied}
-	\subsection{New set}
-	Figure showing all association reactions are not ready yet.
-	
-	
-	\subsection{Old set}
-	The reaction numbers refer to the same indeces used in \textcite{dohm2018}.
-	Note that reaction 12b is the same as reaction 12 but using trans-stilbene instead of ethene.
-
-\section{Overview of BSSE for the new reactions}
+\section{Overview of BSSEs (new reactions)}
 \Cref{fig: bsse overview} presents the BSSE for all basis sets and all reactions. 
 Systems with larger BSSEs may be of special interest in the benchmark, since the impact of
 the MRChem calculations may be larger.
@@ -97,11 +102,11 @@ Further, the tetrahedral geometry may lead to a larger electron density close to
 \begin{figure}[H]
 	\centering
 	\includegraphics[width = \textwidth]{../figs/bsse.png}
-	\caption{BSSEs for all BP86 (top) and PBE0 (bottom). Reactions 8--15 (Ni complexes) seem to have larger BSSEs than reactions 0--7 (Cr complexes).}
+	\caption{BSSEs for various GTO basis sets computed with BP86 (top) and PBE0 (bottom). Reactions 8--15 (Ni complexes) seem to have larger BSSEs than reactions 0--7 (Cr complexes).}
 	\label{fig: bsse overview}
 \end{figure}
 
-\section{OLD: Reaction energies, GTOs vs MWs}
+\section{Comparing reaction energies from GTOs and MWs (old reactions)}
 In order to compare reaction energies computed from GTOs and MWs, we use the relative error metric:
 
 \begin{equation} \label{eq: relative error}
@@ -144,39 +149,53 @@ The correct expression for the RE is therefore to use the electronic reaction en
 		\centering
 		\label{tab: rxn energies old bp86}
 		\caption{CP-corrected reaction energies (\si{kcal/mol}) with BP86 for the old set of reactions. D3 corrections have been applied to GTO and MW reaction energies. Reaction energies without CP-correction are given in parenthesis. No ZPE corrections applied.}
+		\begin{threeparttable}
 		\begin{tabular}{l l l l l l }
 			\toprule
-			Reaction & def2-tzvp       & 6-311+g(d,p)    & def2-qzvpp      & MW6    & Reference \parencite{dohm2018} \\ \midrule
+			Reaction & def2-tzvp       & 6-311+g(d,p)    & def2-qzvpp      & MW6    & $^\dagger$Reference \parencite{dohm2018} \\ \midrule
 			r1       & -47.38 (-46.77) & -47.23 (-46.05) & -46.86 (-46.63) & -46.71 & -43.1                          \\
 			r12      & -29.36 (-28.60) & -30.09 (-29.05) & -28.95 (-28.80) & -28.93 & -29.8                          \\
-			r12b     & -32.13 (-31.09) & -34.07 (-31.45) & -31.57 (-31.31) & -31.46 &                                \\
+			r12b     & -32.13 (-31.09) & -34.07 (-31.45) & -31.57 (-31.31) & -31.46 & ---                               \\
 			r2       & -50.43 (-49.78) & -50.48 (-49.18) & -49.80 (-49.53) & -49.56 & -46.6                          \\
 			r3       & -31.50 (-30.94) & -31.90 (-30.99) & -31.33 (-31.10) & -30.99 & -27.6                          \\
 			r4       & -75.75 (---)    & -74.83 (---)    & -74.56 (---)    & -74.42 & -62.5                          \\
 			r6       & -18.18 (-18.00) & -18.57 (-18.20) & -18.25 (-18.18) & -18.25 & -23.2                          \\ \bottomrule
 		\end{tabular}
+\begin{tablenotes}
+	\item $^\dagger$ DLPNO(\verb|tightPNO|)-CCSD(T) / CBS(def2-TZVPP---def2-QZVPP basis)
+\end{tablenotes}
+
+\end{threeparttable}
 	\end{table}
 
 \begin{table}[H]
 	\centering
 	\label{tab: rxn energies old pbe0}
 	\caption{CP-corrected reaction energies (\si{kcal/mol}) with PBE0 for the old set of reactions. D3 corrections have been applied to GTO and MW reaction energies. Reaction energies without CP-correction are given in parenthesis. No ZPE corrections applied.}
+	\begin{threeparttable}
 	\begin{tabular}{l l l l l l}
 		\toprule
-		Reaction & def2-tzvp       & 6-311+g(d,p)    & def2-qzvpp      & MW6    & Reference \parencite{dohm2018} \\ 
+		Reaction & def2-tzvp       & 6-311+g(d,p)    & def2-qzvpp      & MW6    & $^\dagger$Reference \parencite{dohm2018} \\ 
 		\midrule
 		r1       & -45.30 (-44.80) & -45.16 (-43.92) & -44.81 (-44.62) & -44.67 & -43.1                          \\
 		r12      & -29.53 (-28.84) & -30.28 (-29.05) & -29.12 (-28.95) & -29.00 & -29.8                          \\
-		r12b     & -27.40 (-26.45) & -29.78 (-26.76) & -26.86 (-26.60) & -26.65 &                                \\
+		r12b     & -27.40 (-26.45) & -29.78 (-26.76) & -26.86 (-26.60) & -26.65 & ---                               \\
 		r2       & -48.49 (-47.90) & -48.56 (-47.11) & -47.74 (-47.54) & -47.59 & -46.6                          \\
 		r3       & -26.80 (-26.28) & -27.33 (-26.33) & -26.54 (-26.37) & -26.37 & -27.6                          \\
 		r4       & -72.56 (---)    & -71.98 (---)    & -71.44 (---)    & -71.39 & -62.5                          \\
 		r6       & -20.41 (-20.21) & -20.74 (-20.31) & -20.50 (-20.40) & -20.40 & -23.2                          \\ 
 		\bottomrule
 	\end{tabular}
+\begin{tablenotes}
+	\item $^\dagger$ DLPNO(\verb|tightPNO|)-CCSD(T) / CBS(def2-TZVPP---def2-QZVPP basis)
+\end{tablenotes}
+
+\end{threeparttable}
 \end{table}
 	
 
 \printbibliography
+
+%\input{chemfigs.tex}
 
 \end{document}
