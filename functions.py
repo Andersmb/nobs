@@ -1,6 +1,7 @@
 import yaml
 from glob import glob
 from tqdm import tqdm, trange
+from collections import OrderedDict
 from pprint import pprint
 import sys
 import os
@@ -9,8 +10,17 @@ from orca import OrcaOut
 from mrchem import MrchemOut
 
 AU2KCAL = 627.509
+NUM_RXN = 28
 functionals = ["bp86", "pbe0"]
-basis_sets = ["6311gdp", "aug-6311gdp", "def2tzvp", "def2qzvpp", "def2svp", "631g"]
+basis_sets = ["6311gdp", "def2tzvp", "def2qzvpp", "def2svp", "631g"]  # We skip 6311+G(d,p) for now. Need to converge more calculations.
+reactions = [f"r{i}" for i in range(NUM_RXN)]
+reactions_file = "/Volumes/external/phd/rsync-project-stallo/nobs/__reactions__.yaml"
+molecules = ["complex", "frag1", "frag2"]
+
+
+def load_rxn():
+    with open(reactions_file) as f:
+        return yaml.safe_load(f)
 
 
 def stem(s):
@@ -106,3 +116,104 @@ def get_old_mwref(d3=False) -> dict:
             ref[func].append((rxn, (DeltaE + delta_d3)*AU2KCAL))
 
     return ref
+
+
+def get_raw_data() -> dict:
+    """"""
+    root_mw = "/Volumes/external/phd/rsync-project-saga/nobs/calcs/mw"
+    root_go = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/go"
+    root_sp = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/sp"
+    root_cp = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/cp"
+
+    # Load __reactions file
+    __reactions = load_rxn()
+
+    # Initialize data structure
+    data = {rxn: {func: {bas: {mol: {
+        "gto_energy": None,
+        "gto_d3": None,
+        "gto_zpe": None,
+        "gto_no_cores": None,
+        "gto_no_scf_cycles": None,
+        "gto_walltime": None,
+        "gto_scf_timings": None,
+
+        "mw_energy": None,
+        "mw_no_cores": None,
+        "mw_no_scf_cycles": None,
+        "mw_walltime": None,
+
+        "no_atoms": None,
+        "no_electrons": None
+    } for mol in molecules} for bas in basis_sets} for func in functionals} for rxn in reactions}
+
+    # Add field for reference energy, if any
+    for rxn in reactions:
+        data[rxn]["ref"] = None
+
+    # Add field for BSSE
+    for rxn in reactions:
+        for func in functionals:
+            for bas in basis_sets:
+                data[rxn][func][bas]["bsse"] = {"au": None, "kcalmol": None}
+
+    # Fill up with actual data
+    for rxn in tqdm(reactions, desc="Collecting data"):
+        if not __reactions[rxn]["COMPLETE"]:
+            continue  # We skip all reactions where all data is not yet gathered
+
+        # Determine from which reaction to grab the fragments
+        base_complex = __reactions[rxn]["base_complex"]  # Only relevant for reaction 16/17
+        base_frag1 = __reactions[rxn]["base_frag1"]
+        base_frag2 = __reactions[rxn]["base_frag2"]
+        bases = [base_complex, base_frag1, base_frag2]
+
+        for func in functionals:
+            for bas in basis_sets:
+                for base, mol in zip(bases, molecules):
+                    # We will use the 'base_mol' syntax to obtain properties from the correct files
+
+                    # Define files
+                    f_e = os.path.join(root_sp, base, func, bas, mol+".out")
+                    f_zpe = os.path.join(root_go, base, func, mol+".out")
+                    f_cp = os.path.join(root_cp, f"{rxn}_{func}_{bas}.out")
+                    f_mw = os.path.join(root_mw, base, func, mol+".out")
+
+                    # Generate output file instances
+                    try:
+                        output_e = OrcaOut(f_e)
+                        output_zpe = OrcaOut(f_zpe)
+                        output_cp = OrcaOut(f_cp)
+                        output_mw = MrchemOut(f_mw)
+                    except FileNotFoundError:
+                        tqdm.write("File not found...")
+
+                    # Get data
+                    data[rxn][func][bas][mol]["gto_energy"] = output_e.final_total_energy()
+                    data[rxn][func][bas][mol]["gto_d3"] = output_e.dispersion_correction()
+                    data[rxn][func][bas][mol]["gto_zpe"] = output_zpe.zero_point_energy_correction()
+                    data[rxn][func][bas][mol]["gto_walltime"] = output_e.walltime()
+                    data[rxn][func][bas][mol]["gto_scf_timings"] = output_e.scf_timings()[0]
+                    data[rxn][func][bas][mol]["gto_no_cores"] = output_e.no_cores()
+                    data[rxn][func][bas][mol]["gto_no_scf_cycles"] = output_e.no_scfcycles()[0]
+
+                    data[rxn][func][bas][mol]["mw_energy"] = output_mw.final_energy_pot()
+                    data[rxn][func][bas][mol]["mw_walltime"] = output_mw.walltime()
+                    data[rxn][func][bas][mol]["mw_no_cores"] = output_mw.no_cores()
+                    data[rxn][func][bas][mol]["mw_no_scf_cycles"] = output_mw.no_scfcycles()
+
+                    data[rxn][func][bas]["bsse"]["au"] = output_cp.cmp_var("bsse_au")
+                    data[rxn][func][bas]["bsse"]["kcalmol"] = output_cp.cmp_var("bsse_kcalmol")
+
+                    data[rxn][func][bas][mol]["no_atoms"] = __reactions[rxn][mol]["natoms"]
+                    data[rxn][func][bas][mol]["no_electrons"] = __reactions[rxn][mol]["nel"]
+
+    with open("data_sets/raw_data.yaml", "w") as f:
+        yaml.dump(dict(data), f)
+
+    return data
+
+
+if __name__ == "__main__":
+    get_raw_data()
+    # get_bsse_data(skip=["aug-6311gdp", "r27"])
