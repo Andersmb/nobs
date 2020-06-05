@@ -1,7 +1,6 @@
 import yaml
 import numpy as np
 from collections import OrderedDict
-from tqdm import tqdm, trange
 import matplotlib.pyplot as plt
 
 with open("data_sets/bsse.yaml") as f:
@@ -10,7 +9,6 @@ with open("data_sets/bsse.yaml") as f:
 basis_sets = OrderedDict({"def2qzvpp": "def2-qzvpp",
                           "def2tzvp": "def2-tzvp",
                           "def2svp": "def2-svp",
-                          "aug-6311gdp": "6-311+g(d,p)",
                           "6311gdp": "6-311g(d,p),",
                           "631g": "6-31g"})
 
