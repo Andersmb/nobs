@@ -1,9 +1,8 @@
 import matplotlib.pyplot as plt
 from tqdm import tqdm
-from functions import basis_sets, functionals, reactions, molecules, load_rxn
-import yaml
+from functions import basis_sets, functionals, reactions, molecules, load_data
 
-rawdata = yaml.load(open("data_sets/raw_data.yaml"), Loader=yaml.SafeLoader)
+rawdata = load_data("raw")
 basis_types = ["mw", "gto"]
 
 # Extract data from rawdata to a more convenient format
