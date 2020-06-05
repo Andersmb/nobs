@@ -14,12 +14,17 @@ NUM_RXN = 28
 functionals = ["bp86", "pbe0"]
 basis_sets = ["6311gdp", "def2tzvp", "def2qzvpp", "def2svp", "631g"]  # We skip 6311+G(d,p) for now. Need to converge more calculations.
 reactions = [f"r{i}" for i in range(NUM_RXN)]
-reactions_file = "/Volumes/external/phd/rsync-project-stallo/nobs/__reactions__.yaml"
 molecules = ["complex", "frag1", "frag2"]
 
+files = {"raw": "data_sets/raw_data.yaml",
+         "bsse": "data_sets/bsse.yaml",
+         "rxn": "/Volumes/external/phd/rsync-project-stallo/nobs/__reactions__.yaml",
+         "old": "data_sets/old_data.yaml"}
 
-def load_rxn():
-    with open(reactions_file) as f:
+
+def load_data(d):
+    assert d in files.keys(), f"File not recognized! Must be any of {', '.join(files.keys())}"
+    with open(files[d]) as f:
         return yaml.safe_load(f)
 
 
@@ -61,15 +66,14 @@ def get_bsse_data(skip=None) -> dict:
         for basis in data[func].keys():
             data[func][basis] = sorted(data[func][basis], key=lambda x: int(x[0][1:]))
 
-    with open("data_sets/bsse.yaml", "w") as f:
+    with open(files["bsse"], "w") as f:
         yaml.dump(data, f, default_flow_style=False, indent=4)
     return data
 
 
 def get_old_data(d3=False, zpe=False) -> dict:
     """Return the old GTO reaction energies."""
-    with open("data_sets/old_data.yaml") as f:
-        data = yaml.load(f, Loader=yaml.Loader)
+    data = load_data("old")
 
     # Get relevant data in convenient format
     skip_basis= ["def2svp", "6311gdp", "631g"]
@@ -104,8 +108,7 @@ def get_old_data(d3=False, zpe=False) -> dict:
 
 def get_old_mwref(d3=False) -> dict:
     """Return the MW6 reference reaction energies, optionally with D3 correction."""
-    with open("data_sets/old_data.yaml") as f:
-        data = yaml.load(f, Loader=yaml.Loader)
+    data = load_data("old")
 
     ref = {func: [] for func in functionals}
     for rxn in data.keys():
@@ -126,7 +129,7 @@ def get_raw_data() -> dict:
     root_cp = "/Volumes/external/phd/rsync-project-stallo/nobs/calcs/cp"
 
     # Load __reactions file
-    __reactions = load_rxn()
+    __reactions = load_data("rxn")
 
     # Initialize data structure
     data = {rxn: {func: {bas: {mol: {
@@ -208,7 +211,7 @@ def get_raw_data() -> dict:
                     data[rxn][func][bas][mol]["no_atoms"] = __reactions[rxn][mol]["natoms"]
                     data[rxn][func][bas][mol]["no_electrons"] = __reactions[rxn][mol]["nel"]
 
-    with open("data_sets/raw_data.yaml", "w") as f:
+    with open(files["raw"], "w") as f:
         yaml.dump(dict(data), f)
 
     return data
