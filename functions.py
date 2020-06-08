@@ -8,6 +8,7 @@ import os
 sys.path.append("/Users/abr121/Documents/dev/QueueGui3/output_parsers")
 from orca import OrcaOut
 from mrchem import MrchemOut
+from collections import OrderedDict
 
 AU2KCAL = 627.509
 NUM_RXN = 28
@@ -16,19 +17,25 @@ basis_sets = ["6311gdp", "def2tzvp", "def2qzvpp", "def2svp", "631g"]  # We skip 
 reactions = [f"r{i}" for i in range(NUM_RXN)]
 molecules = ["complex", "frag1", "frag2"]
 
+basis_sets_ordered = OrderedDict({"def2qzvpp": "def2-qzvpp",
+                                  "def2tzvp": "def2-tzvp",
+                                  "def2svp": "def2-svp",
+                                  "6311gdp": "6-311g(d,p)",
+                                  "631g": "6-31g"})
+
 files = {"raw": "data_sets/raw_data.yaml",
          "bsse": "data_sets/bsse.yaml",
          "rxn": "/Volumes/external/phd/rsync-project-stallo/nobs/__reactions__.yaml",
          "old": "data_sets/old_data.yaml"}
 
 
-def load_data(d):
+def load_data(d) -> dict:
     assert d in files.keys(), f"File not recognized! Must be any of {', '.join(files.keys())}"
     with open(files[d]) as f:
-        return yaml.safe_load(f)
+        return yaml.load(f, Loader=yaml.Loader)
 
 
-def stem(s):
+def stem(s) -> str:
     return s.split(".")[0]
 
 
@@ -217,6 +224,64 @@ def get_raw_data() -> dict:
     return data
 
 
+def get_reaction_energies(zpe=False, d3=False) -> tuple:
+    """Return tuple of dicts with reaction energies for completed reactions from raw data."""
+    rawdata = load_data("raw")
+    __reactions = load_data("rxn")
+    gto = {rxn: {func: {bas: {cp: None for cp in ["cp", "noncp"]} for bas in basis_sets} for func in functionals} for rxn in reactions if __reactions[rxn]["COMPLETE"]}
+    mw = {rxn: {func: None for func in functionals} for rxn in reactions if __reactions[rxn]["COMPLETE"]}
+
+    for rxn in reactions:
+        if not __reactions[rxn]["COMPLETE"]:
+            continue
+        for func in functionals:
+            e_c = rawdata[rxn][func]["def2qzvpp"]["complex"]["mw_energy"]
+            e_f1 = rawdata[rxn][func]["def2qzvpp"]["frag1"]["mw_energy"]
+            e_f2 = rawdata[rxn][func]["def2qzvpp"]["frag2"]["mw_energy"]
+
+            d3_c = rawdata[rxn][func]["def2qzvpp"]["complex"]["gto_d3"]
+            d3_f1 = rawdata[rxn][func]["def2qzvpp"]["frag1"]["gto_d3"]
+            d3_f2 = rawdata[rxn][func]["def2qzvpp"]["frag2"]["gto_d3"]
+
+            zpe_c = rawdata[rxn][func]["def2qzvpp"]["complex"]["gto_zpe"]
+            zpe_f1 = rawdata[rxn][func]["def2qzvpp"]["frag1"]["gto_zpe"]
+            zpe_f2 = rawdata[rxn][func]["def2qzvpp"]["frag2"]["gto_zpe"]
+
+            delta_e = e_c - e_f1 - e_f2
+            delta_d3 = d3_c - d3_f1 - d3_f2 if d3 else 0
+            delta_zpe = zpe_c - zpe_f1 - zpe_f2 if zpe else 0
+
+            mw[rxn][func] = (delta_e + delta_d3 + delta_zpe) * AU2KCAL
+
+            for bas in basis_sets:
+                e_c = rawdata[rxn][func][bas]["complex"]["gto_energy"]
+                e_f1 = rawdata[rxn][func][bas]["frag1"]["gto_energy"]
+                e_f2 = rawdata[rxn][func][bas]["frag2"]["gto_energy"]
+
+                d3_c = rawdata[rxn][func][bas]["complex"]["gto_d3"]
+                d3_f1 = rawdata[rxn][func][bas]["frag1"]["gto_d3"]
+                d3_f2 = rawdata[rxn][func][bas]["frag2"]["gto_d3"]
+
+                zpe_c = rawdata[rxn][func][bas]["complex"]["gto_zpe"]
+                zpe_f1 = rawdata[rxn][func][bas]["frag1"]["gto_zpe"]
+                zpe_f2 = rawdata[rxn][func][bas]["frag2"]["gto_zpe"]
+
+                delta_e = e_c - e_f1 - e_f2
+                delta_d3 = d3_c - d3_f1 - d3_f2 if d3 else 0
+                delta_zpe = zpe_c - zpe_f1 - zpe_f2 if zpe else 0
+
+                cp = rawdata[rxn][func][bas]["bsse"]["au"]
+
+                gto[rxn][func][bas]["cp"] = (delta_e + delta_d3 + delta_zpe + cp) * AU2KCAL
+                gto[rxn][func][bas]["noncp"] = (delta_e + delta_d3 + delta_zpe) * AU2KCAL
+
+    return gto, mw
+
+
+
+
+
 if __name__ == "__main__":
-    get_raw_data()
+    # get_raw_data()
     # get_bsse_data(skip=["aug-6311gdp", "r27"])
+    pass
