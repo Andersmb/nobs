@@ -106,6 +106,29 @@ Further, the tetrahedral geometry may lead to a larger electron density close to
 	\label{fig: bsse overview}
 \end{figure}
 
+\section{Comparing reaction energies from GTOs and MWs (new reactions)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{../figs/reaction_energies.png}
+	\caption{Reaction energies computed with different basis sets.}
+	\label{fig: }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{../figs/absolute_errors.png}
+	\caption{Absolute errors in reaction energies for different basis sets compared to MWs at precision $\epsilon = \num{1e-6}$. Computed as $\Delta E^{\text{gto}} - \Delta E^{\text{mw}}$}
+	\label{fig: }
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width = \textwidth]{../figs/relative_errors.png}
+	\caption{Relative errors in reaction energies for different basis sets, using MW6 as the reference. Computed as $\dfrac{\Delta E^{\text{gto}} - \Delta E^{\text{mw}}}{\Delta E^{\text{mw}}} \cdot \SI{100}{\percent}$}
+	\label{fig: }
+\end{figure}
+
 \section{Comparing reaction energies from GTOs and MWs (old reactions)}
 In order to compare reaction energies computed from GTOs and MWs, we use the relative error metric:
 
