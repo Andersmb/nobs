@@ -2,15 +2,9 @@ import yaml
 import numpy as np
 from collections import OrderedDict
 import matplotlib.pyplot as plt
+from functions import load_data, basis_sets_ordered
 
-with open("data_sets/bsse.yaml") as f:
-    data = yaml.load(f, Loader=yaml.Loader)
-
-basis_sets = OrderedDict({"def2qzvpp": "def2-qzvpp",
-                          "def2tzvp": "def2-tzvp",
-                          "def2svp": "def2-svp",
-                          "6311gdp": "6-311g(d,p),",
-                          "631g": "6-31g"})
+data = load_data("bsse")
 
 fig, axes = plt.subplots(nrows=2, figsize=(10, 5), dpi=100, sharex="all")
 n_rxn = len(data["bp86"]["def2svp"])
@@ -25,7 +19,7 @@ cntr = 0
 
 for ax, func in zip(axes, data.keys()):
     i = 0
-    for baskey, basval in basis_sets.items():
+    for baskey, basval in basis_sets_ordered.items():
         rxn, bas = zip(*data[func][baskey])
         ax.bar(pos+i*width, bas, width, color=colors[i], edgecolor=ec, linewidth=lw, label=basval)
         i += 1
